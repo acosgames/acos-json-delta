@@ -153,16 +153,45 @@ delta2:
 
 ## Methods
 
-### `createDefaultDict(dictionary)`
+### `delta(from, to, result)`
 
 Setup the default dictionary to use by this package.
 
-#### Parameters
+##### Parameters
 
-- **dictionary** (array of strings) - dictionary to use for this encoding.
+- **from** (JSON object or array) - Data before mutation
+- **to** (JSON object or array) - Data after mutation
+- **result** (JSON object or array) - Data after merging the from/to
 
-#### Returns
+##### Returns
 
-Dictionary object used internally. You should not need to use it.
+**result** is returned redundantly, for readability.
 
 .
+
+### `merge(from, delta)`
+
+Setup the default dictionary to use by this package.
+
+##### Parameters
+
+- **from** (JSON object or array) - Data previously saved
+- **delta** (JSON object or array) - Delta JSON generated using the `delta` function
+
+##### Returns
+
+JSON data merged between the `from` and the `delta`.
+
+.
+
+### `hidden(json)`
+
+##### Parameters
+
+- **json** (JSON object or array) - Data that will be mutated to delete objects
+
+Deletes and extracts the keys marked as hidden. Keys with prefix `_` are marked hidden.
+
+##### Returns
+
+Extracted hidden keys only.
