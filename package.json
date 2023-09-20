@@ -1,6 +1,6 @@
 {
   "name": "acos-json-delta",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JSON delta and merge used by ACOS.games",
   "main": "delta.js",
   "scripts": {

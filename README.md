@@ -1,6 +1,8 @@
-# ACOS JSON Encoder for Websocket Networking
+# ACOS JSON Delta for Websocket Networking
 
-Generate a delta of your JSON data of any changes, reducing your bandwidth bytes transmitted to players. When data is received, merge it with the previous JSON data.
+Generate a delta of your JSON data of any changes, reducing your bandwidth bytes transmitted to players. When JSON delta is received at receiver, merge it with the previous JSON data.
+
+This package is used in combination with the [acos-json-encoder](https://github.com/acosgames/acos-json-encoder) to maximize bandwidth reduction.
 
 ## Installation
 
@@ -9,8 +11,6 @@ npm i acos-json-delta
 ```
 
 ## Usage
-
-This package is used in combination with the `acos-json-encoder` to maximize bandwidth reduction.
 
 ### CommonJS usage
 
@@ -88,7 +88,7 @@ merged = merge(merged, diff);
 
 ##### Example Output
 
-The array changes appear complex, but when combined with `acos-json-encoder` they are efficiently optimized to use up minimum bytes. You can identify array deltas when their key is prefixed with `#`.
+The array changes appear complex, but when combined with [acos-json-encoder](https://github.com/acosgames/acos-json-encoder) they are efficiently optimized to use up minimum bytes. You can identify array deltas when their key is prefixed with `#`.
 
 Deletions of an object key are added to a key named `$` with array of keys to be deleted on merge. See delta2 example below.
 
