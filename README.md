@@ -194,4 +194,4 @@ Deletes and extracts the keys marked as hidden. Keys with prefix `_` are marked 
 
 ##### Returns
 
-Extracted hidden keys only.
+Extracted hidden keys and values.
