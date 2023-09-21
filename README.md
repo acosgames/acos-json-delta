@@ -155,7 +155,7 @@ delta2:
 
 ### `delta(from, to, result)`
 
-Setup the default dictionary to use by this package.
+Generate a delta between two JSON data
 
 ##### Parameters
 
@@ -171,7 +171,7 @@ Setup the default dictionary to use by this package.
 
 ### `merge(from, delta)`
 
-Setup the default dictionary to use by this package.
+Merge JSON data with a JSON delta
 
 ##### Parameters
 
